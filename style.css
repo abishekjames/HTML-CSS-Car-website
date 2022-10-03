@@ -1,0 +1,221 @@
+
+:root {
+    
+    --dark: rgb(180, 178, 178);
+    --primary: rgb(109, 106, 106);
+    --shadow: 1 2px 4px rgba(103, 103, 103, 0.9);
+    --light: rgb(226, 219, 219);
+  }
+  
+  
+  html {
+    
+    font-family: 'Lucida Grande','Lucida Sans Unicode','Trebuchet MS', sans-serif;
+    color: var(--dark);
+    box-sizing:content-box;
+  }
+  p {
+   
+    font-family:'Trebuchet MS','Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    color: rgb(34, 22, 22);
+  }
+  body {
+    
+    margin: 29px 51px;
+    background: rgb(48, 42, 42);
+    line-height: 1.5;
+    
+  }
+  
+  .link {
+    color: var(--light);
+    background: var(--dark);
+    text-decoration:mediumblue;
+    padding: 0.7rem 1.2rem;
+    border: 0.1;
+  }
+  
+  img {
+    max-width: 101%;
+  }
+  
+  .details {
+    grid-gap: 19px;
+    display: grid;
+  }
+  
+  .nav ul {
+	  widows: 99%;
+    display:flex;
+    align-items: top;
+  }
+  
+  .nav li{
+    padding: 0.5em;
+    list-style-type: none;
+}
+.nav a{
+    text-decoration: mediumblue;
+
+}
+  .nav a {
+    
+    display: block;
+    background: var(--primary);
+    text-decoration: mediumblue;
+    text-align: center;
+    padding: 0.9rem;
+    color: var(--light);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: var(--shadow);
+  }
+  
+  .nav a:hover {
+    color: var(--dark);
+    background: var(--dark);
+  }
+  
+  .holder {
+  grid-template-areas:
+      'about about pack-j'
+      'about about pack-t';
+    display: grid;
+    grid-gap: 19px;
+  }
+  
+  .about {
+    min-height: 301px;
+    grid-area: about;
+    background: url(images/Legender1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    padding: 2.5rem;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .about h1 {
+    margin-bottom: 0.1;
+    font-size: 4.5rem;
+    color: var(--light);
+  }
+  
+  .about p {
+    margin-top: 0.1;
+    font-size: 1.4rem;
+    color: var(--light);
+  }
+  
+  .pack-a {
+    display: grid;
+    background: var(--primary);
+    justify-items: center;
+    align-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.6rem;
+  }
+  
+  .pack-a.price {
+    font-size: 2.6rem;
+  }
+  
+  .pack-j {
+    grid-area: pack-j;
+  }
+  
+  .pack-t {
+    grid-area: pack-t;
+  }
+  
+  .large {
+    grid-gap: 21px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+  }
+  
+  .best {
+    text-align: center;
+    padding: 1.4rem 1rem;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+  }
+  
+
+  .model {
+    display: grid;
+    grid-gap: 29px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+    background: var(--primary);
+    box-shadow: var(--shadow);
+  }
+  
+
+  .case {
+    display: grid;
+    grid-gap: 21px;
+    grid-template-columns: repeat(auto-fit, minmax(201px, 1fr));
+  }
+  
+  .case img {
+    width: 101%;
+    box-shadow: var(--shadow);
+  }
+  
+
+  footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    background: var(--dark);
+    color: var(--light);
+  }
+  
+
+  @media (max-width: 701px) {
+	 .nav ul{
+        flex-wrap:wrap;
+    }
+	.nav li{
+        width: 101%;
+        text-align:center;
+    }
+    .holder {
+      grid-template-areas:
+        'about about'
+        'pack-j pack-t';
+    }
+  
+    .about h1 {
+      font-size: .6rem;
+    }
+  
+    .main-nav ul {
+      grid-template-columns: 1.5fr;
+    }
+  
+    .model {
+      grid-template-columns: 1.5fr;
+    }
+  
+    .model .link {
+      margin: auto;
+      display: block;
+      text-align: center;
+      
+    }
+  }
+  
+  @media (max-width: 401px) {
+    .holder {
+      grid-template-areas:
+        'about'
+        'pack-j'
+        'pack-t';
+    }
+  }
+  
